@@ -1,24 +1,20 @@
-# kamakaniokala
-NASA DSCVR mission Space Apps Challenge 2022 submission by team Kamakani o ka lā
+# dscovrmatic
+NASA Space Apps Challenge 2023 
+## Oracle of DSCOVR Challenge
 
-The challenge is to improve the quality of predictions for the DSCVR spacecraft's Faraday Cup (FC) instrument using
-FC data from the WIND spacecraft. Both DSCVR and WIND orbit the Earth Sun L1 Lagrange point in space so the data
-if the FC instruments on these two spacecraft can be correlated.
+The challenge is to use DSCOVR spacecraft's Faraday Cup (FC) instrument data to predict the threat level of geomagnetic storms.
+The DSCOVR instrument has an intermittent data problem so one goal is to make predictions that are robust to these errors, 
+even exploring whether the errors are somehow predictive of space weather.
 
-Our approach is to use deep learning to train:
-1. anomaly detector
-1. proton velocity vector predictor
+The Kp index is an integer valued geomagnetic storm threat estimate. Our goal is to train a model that predicts Kp based on recent DSCOVR data.
+We have cached the DSCOVR and Kp index data on the UH/IfA data transfer node [spaceapps repo](http://dtn-itc.ifa.hawaii.edu/spaceapps).
 
-and combine these into a pipeline to make filter DSCVR magnetic field data and use "good" data to make ion velocity predictions.
+### DSCOVR data
+The 2022 training data was downloaded from the [NASA Space Apps Challenge 2023 data resources page](https://opensource.gsfc.nasa.gov/spaceappschallenge/dsc_fc_summed_spectra_2022_v01.zip)
+The 2023 test data was downloaded from the [NASA Space Apps Challenge 2023 data resources page](https://opensource.gsfc.nasa.gov/spaceappschallenge/dsc_fc_summed_spectra_2023_v01.zip)
 
-Our stretch goal is to use transfer learning to adapt the WIND trained ion predictor to a carefully curated DSCVR data set that includes ion predictions for DSCVR.
+### STP Daily Space Weather Indices
+This data was downloaded from the [NOAA STP NOAA archive](ftp://ftp.ngdc.noaa.gov/STP/swpc_products/daily_reports/space_weather_indices)
 
-We (will) include 8 Jupyter notebooks:
-1. explore NASA's WIND and DSCVR challenge data &#9989;
-2. train an anomaly detector on WIND data &#9989;
-3. train an ion predictor on WIND data
-4. make predictions on WIND held out test set data 
-5. make predictions using DSCVR data and compare with published DSCVR proton velocity vector estimates
-6. produce a curated set of high quality DSCVR proton velocity vector estimates
-7. use transfer learning to adapt WIND predictor to a DSCVR predictor
-8. make predictions using DSCVR data and compare with published DSCVR proton velocity vector estimates
+We include there Jupyter notebooks:
+1. explore NASA's WIND and DSCVR challenge data
