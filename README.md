@@ -14,7 +14,11 @@ The 2022 training data was downloaded from the [NASA Space Apps Challenge 2023 d
 The 2023 test data was downloaded from the [NASA Space Apps Challenge 2023 data resources page](https://opensource.gsfc.nasa.gov/spaceappschallenge/dsc_fc_summed_spectra_2023_v01.zip)
 
 ### STP Daily Space Weather Indices
-This data was downloaded from the [NOAA STP NOAA archive](ftp://ftp.ngdc.noaa.gov/STP/swpc_products/daily_reports/space_weather_indices)
+This data was downloaded from the [NOAA STP NOAA archive](ftp://ftp.ngdc.noaa.gov/STP/swpc_products/daily_reports/space_weather_indices).
+We fetch it from our UH/IfA data transfer node [spaceapps repo](http://dtn-itc.ifa.hawaii/spaceapps).
 
-We include there Jupyter notebooks:
-1. explore NASA's WIND and DSCVR challenge data
+We include the following Jupyter notebooks:
+* dscovrmatic_explore.ipynb
+*    Download and explore the raw data sources for this challenge
+* dscovrmatic-etl.ipynb
+*    Extract Transform Load (ETL) from data sources into train.h5, valid.h5 and test.h5
