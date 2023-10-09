@@ -22,3 +22,7 @@ We include the following Jupyter notebooks:
 *    Download and explore the raw data sources for this challenge
 * dscovrmatic-etl.ipynb
 *    Extract Transform Load (ETL) from data sources into train.h5, valid.h5 and test.h5
+* dscovrmatic-mlp.ipynb
+*    Keras TensorFlow MLP model
+* dscovrmatic-conv1d.ipynb
+*    Keras TensorFlow Conv1D CNN model
