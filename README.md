@@ -26,3 +26,5 @@ We include the following Jupyter notebooks:
 *    Keras TensorFlow MLP model
 * dscovrmatic-conv1d.ipynb
 *    Keras TensorFlow Conv1D CNN model
+
+[Submission Slides](https://docs.google.com/presentation/d/e/2PACX-1vTZPeZbcVUSYIbZtWtcy5im35P7uL5MbLCeqCabnxSnc6hiag_0qkqB7XIkTCkl8RBxpL74s2GfDFxh/pub?start=false&loop=false&delayms=3000)
